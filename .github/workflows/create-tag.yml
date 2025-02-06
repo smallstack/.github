@@ -1,11 +1,12 @@
 name: Create Tag
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       version:
         description: "semver version to release: major, minor, patch"
         required: true
         default: "patch"
+        type: string
 
 jobs:
   CreateTag:
